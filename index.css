@@ -27,7 +27,7 @@
   
   .calendar {
     width: 80%;
-    height: 74%;
+    height: 62%;
     background-color: var(--secondary-background);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
   }
@@ -74,7 +74,7 @@
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0.1rem;
-    width: calc(74.2rem / 7);
+    width: calc(100% / 7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,8 +91,7 @@
   
   .days div {
     font-size: 1.4rem;
-    margin: 0.3rem;
-    width: calc(67.7rem / 7);
+    width: calc(100% / 7);
     height: 8rem;
     display: flex;
     justify-content: center;
