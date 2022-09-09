@@ -1,0 +1,62 @@
+:root{
+    --primary-background: #fff;
+    --secondary-background: #e8f0fe;
+    --blue: #2059ad;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  html {
+    font-size: 62.5%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-background);
+    color: #202124;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calendar {
+    width: 80%;
+    height: 74%;
+    background-color: var(--secondary-background);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  }
+
+  .month {
+    width: 100%;
+    height: 12rem;
+    background-color: var(--blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    color:var(--secondary-background);
+  }
+
+  .month i {
+    font-size: 2.5rem;
+    cursor: pointer;
+  }
+  
+  .month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .month p {
+    font-size: 1.6rem;
+  }
