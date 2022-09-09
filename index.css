@@ -1,6 +1,6 @@
 :root{
     --primary-background: #fff;
-    --secondary-background: #e8f0fe;
+    --secondary-background: #f8fbff;
     --blue: #2059ad;
 }
 
@@ -59,4 +59,23 @@
   
   .month p {
     font-size: 1.6rem;
+  }
+
+  .weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+    color: var(--blue);
+  }
+  
+  .weekdays div {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    width: calc(74.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
