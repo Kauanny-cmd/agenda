@@ -45,11 +45,7 @@ const render = () => {
       i === new Date().getDate() &&
       date.getMonth() === new Date().getMonth()
     ) {
-      days += `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-       <div class="today">${i}</div>
-      </button>
-      
-      `;
+      days += `<div class="today">${i}</div>`;
     } else {
       days += `<div>${i}</div>`;
     }
@@ -73,3 +69,28 @@ document.querySelector(".next").addEventListener("click", () => {
 });
 
 render();
+
+//Salvando task
+const valueTask = document.getElementById('task');
+
+const valueTime = document.getElementById('time');
+
+const selectedDay = document.getElementById('daySelect');
+
+const saveTask = () => {
+
+  const valueDay = selectedDay.options[selectedDay.selectedIndex].value;
+
+  document.querySelector('.listTask').innerHTML = `
+    <div>
+      <p class="title">${valueTask.value}</p>
+      <p class="time">${valueTime.value}</p>
+      <p class="day">${valueDay}</p>
+    </div>
+  `
+}
+
+document.querySelector("#btn").addEventListener("click", () => {
+
+})
+

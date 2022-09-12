@@ -39,6 +39,17 @@
                 <div></div>
             </div>
         </div>
+
+        <button type="button" id="btn-modal" class="btn btn-primary" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Adicionar tarefas
+        </button>
+
+        <div class="listTask">
+            <div></div>
+        </div>
+
+        <!--Modal-->
         <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -47,7 +58,7 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input type="text" name="Tarefa" id="tarefa" placeholder="Nome da tarefa" />
+                        <input type="text" name="Tarefa" id="task" placeholder="Nome da tarefa" />
                         <input type="time" name="Hora" id="time">
                         <select name="daySelect" style="font-size: 14px;" id="daySelect">
                             <option value="">Dia da semana</option>
@@ -62,7 +73,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal">Salvar</button>
+                        <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal"
+                            onclick="saveTask()">Salvar</button>
                     </div>
                 </div>
             </div>
