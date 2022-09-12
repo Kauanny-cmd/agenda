@@ -104,11 +104,45 @@
     cursor: pointer;
   }
 
-  .today{
-    background-color: var(--blue);
-    color: var(--secondary-background);
+
+  #tarefa{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
   }
 
-  .img{
-    color: var(--secondary-background);
+  #time{
+    font-size: medium;
+    margin: 0;
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  #btn{
+    font-size: 14px;
+    border: none;
+    width: auto;
+    height: auto;
+    padding: 16px;
+  }
+
+  button{
+    width: calc(100% / 7);
+    height: 8rem;
+    align-items: center;
+    justify-content: center;
+    margin:100px;
+    display: flex;
+    border: none;
+  }
+
+  select{
+    width: 150px;
+    height: 58px;
+    padding: 16px;
+  }
+
+  option{
+    font-size: 16px;
   }

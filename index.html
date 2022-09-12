@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 
     <title>Agenda</title>
 </head>
@@ -33,11 +34,39 @@
                 <div>Sáb</div>
             </div>
             <div class="days">
-                <div></div>
+                    <div></div>
             </div>
         </div>
+        <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="..." aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3><strong>Adicione a tarefa</strong></h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="Tarefa" id="tarefa" placeholder="Nome da tarefa"/>
+                    <input type="time" name="Hora" id="time">
+                       <select name="daySelect"style="font-size: 14px;" id="daySelect">
+                        <option value="" >Dia da semana</option>
+                        <option value="dom">Domingo</option>
+                        <option value="seg">Segunda</option>
+                        <option value="ter">Terça</option>
+                        <option value="qua">Quarta</option>
+                        <option value="qui">Quinta</option>
+                        <option value="sex">Sexta</option>
+                        <option value="sab">Sábado</option>
+                       </select>
+                    
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" id ="btn" data-bs-dismiss="modal">Salvar</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

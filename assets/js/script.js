@@ -45,7 +45,11 @@ const render = () => {
         i === new Date().getDate() &&
         date.getMonth() === new Date().getMonth()
       ) {
-        days += `<div class="today">${i}</div>`;
+        days += `<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+       <div class="today">${i}</div>
+      </button>
+      
+      `;
       } else {
         days += `<div>${i}</div>`;
       }
