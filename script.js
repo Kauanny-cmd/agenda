@@ -25,7 +25,16 @@ const render = () => {
         0
     ).getDay();
 
+    const nextDay = 7 - lastDay - 1;
 
+    const months = [
+        'Janeiro', 'Fevereiro', 'Março', 'Junho', 'Julho',
+        'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
+    ]
+
+    document.querySelector('.date h1').innerHTML = months[date.getMonth()];
+
+    document.querySelector('.date p').innerHTML = new Date().toLocaleDateString();
 
 }
 
