@@ -5,7 +5,7 @@ const render = () => {
 
     const monthDays = document.querySelector('.days');
 
-    const lastDays = new Date(
+    const lastDay = new Date(
         date.getFullYear(),
         date.getMonth() + 1,
         0
@@ -17,15 +17,15 @@ const render = () => {
         0
     ).getDate();
 
-    const firstDay = date.getDay();
+    const firstDayIndex = date.getDay();
 
-    const lastDay = new Date(
+    const lastDayIndex = new Date(
         date.getFullYear(),
         date.getMonth() + 1,
         0
     ).getDay();
 
-    const nextDay = 7 - lastDay - 1;
+    const nextDay = 7 - lastDayIndex - 1;
 
     const months = [
         'Janeiro', 'Fevereiro', 'Março', 'Junho', 'Julho',
@@ -36,6 +36,28 @@ const render = () => {
 
     document.querySelector('.date p').innerHTML = new Date().toLocaleDateString();
 
-}
+    let days = "";
+
+    for (let x = firstDayIndex; x > 0; x--) {
+      days += `<div class="prev-date">${prevLastDays - x + 1}</div>`;
+    }
+  
+    for (let i = 1; i <= lastDay; i++) {
+      if (
+        i === new Date().getDate() &&
+        date.getMonth() === new Date().getMonth()
+      ) {
+        days += `<div class="today">${i}</div>`;
+      } else {
+        days += `<div>${i}</div>`;
+      }
+    }
+  
+    for (let j = 1; j <= nextDay; j++) {
+      days += `<div class="next-date">${j}</div>`;
+      monthDays.innerHTML = days;
+    }
+
+};
 
 render();
