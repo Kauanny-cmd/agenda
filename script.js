@@ -28,13 +28,11 @@ const render = () => {
     const nextDay = 7 - lastDayIndex - 1;
 
     const months = [
-        'Janeiro', 'Fevereiro', 'Março', 'Junho', 'Julho',
-        'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'
-    ]
+        "Janeiro", "Fevereiro", "Março", "Abril","Maio","Junho",
+        "Julho","Agosto", "Setembro", "Outubro", "Novembro", "Dezembro",
+    ];
 
     document.querySelector('.date h1').innerHTML = months[date.getMonth()];
-
-    document.querySelector('.date p').innerHTML = new Date().toLocaleDateString();
 
     let days = "";
 
@@ -59,5 +57,15 @@ const render = () => {
     }
 
 };
+
+document.querySelector(".prev").addEventListener("click", () => {
+    date.setMonth(date.getMonth() - 1);
+    render();
+  });
+  
+  document.querySelector(".next").addEventListener("click", () => {
+    date.setMonth(date.getMonth() + 1);
+    render();
+  });
 
 render();
