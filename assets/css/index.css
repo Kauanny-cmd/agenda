@@ -2,6 +2,7 @@
   --primary-background: #fff;
   --secondary-background: #f8fbff;
   --blue: #2059ad;
+  --shadow:rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -17,25 +18,25 @@ html {
 
 .container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: var(--primary-background);
-  color: #202124;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 20px;
 }
 
 .calendar {
   width: 80%;
   height: 66%;
   background-color: var(--secondary-background);
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1rem var(--shadow);
   border-radius: 8px;
 }
 
 .month {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1rem var(--shadow);
   border-radius: 8px;
   width: 100%;
   height: 12rem;
@@ -116,23 +117,90 @@ html {
   border-radius: 8px;
 }
 
+.listTask{
+  box-shadow: 0 0 1rem var(--shadow);
+  border-radius: 8px;
+  width: 80%;
+  height: auto;
+  background-color: var(--secondary-background);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 1.4rem;
+  flex-direction: column;
+}
+
+.task-card{
+  width: 160px;
+  box-shadow: 0 0 1rem var(--shadow);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: var(--primary-background);
+}
+
+.task-card .trash{
+  position: relative;
+  background-color:transparent;
+  height: auto;
+  padding: 0 10px 0 10px;
+  margin: 4px;
+  left: 78%;
+}
+
+.trash,
+.trashAll img{
+  width: 30px;
+  height: 30px;
+}
+
+.trashAll{
+  background-color:transparent;
+  height: auto;
+  margin: 4px;
+  left: 45%;
+  position: relative;
+  margin-bottom: -50px;
+}
+
 .prev-date,
 .next-date{
   opacity:50%;
 }
 
+.modal-body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#daySelect{
+  height: 50px;
+}
+
 #task {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 #time {
   font-size: medium;
-  margin: 0;
   padding: 10px;
-  margin-right: 10px;
+}
+
+#dayModal,
+#dayModalText{
+  width: 100px;
+  padding: 0.2rem;
+  font-size: 16px;
+  text-indent: 1.2rem;
+  height: 50px;
 }
 
 #btn {
@@ -152,6 +220,25 @@ html {
   position: relative;
   margin: 20px;
 }
+
+.listTask h3{
+  margin: 10px;
+  padding: 14px;
+}
+
+li{
+  list-style-type: none;
+}
+
+ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
 
 button {
   width: calc(100% / 7);
