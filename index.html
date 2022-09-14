@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/calendar-today.svg" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
 
@@ -45,8 +46,10 @@
             Adicionar tarefas
         </button>
 
-        <div class="listTask">
-            <div></div>
+        <div class="listTask"><button class="trashAll" onclick="removeTaskAll()"> <img src="./assets/img/trash.svg"></button>
+            <h3>Tarefas</h3>
+            <ul></ul>
+            
         </div>
 
         <!--Modal-->
@@ -58,27 +61,31 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <input type="text" name="Tarefa" id="task" placeholder="Nome da tarefa" />
+
+                        <input type="text" name="Tarefa" id="task" placeholder="Nome da tarefa"/>
                         <input type="time" name="Hora" id="time">
-                        <select name="daySelect" style="font-size: 14px;" id="daySelect">
+                        <select name="daySelect" style="font-size: 14px;" id="daySelect"> 
                             <option value="">Dia da semana</option>
-                            <option value="dom">Domingo</option>
-                            <option value="seg">Segunda</option>
-                            <option value="ter">Terça</option>
-                            <option value="qua">Quarta</option>
-                            <option value="qui">Quinta</option>
-                            <option value="sex">Sexta</option>
-                            <option value="sab">Sábado</option>
+                            <option value="Domingo">Domingo</option>
+                            <option value="Segunda">Segunda</option>
+                            <option value="Terça">Terça</option>
+                            <option value="Quarta">Quarta</option>
+                            <option value="Quinta">Quinta</option>
+                            <option value="Sexta">Sexta</option>
+                            <option value="Sábado">Sábado</option>
                         </select>
 
+                        <input type="number" name="dayModal" id="dayModal" placeholder="Dia"  min='1' max='31'>
+                        <input type="text" name="dayModal" id="dayModalText" placeholder="Mês">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" id="btn" data-bs-dismiss="modal"
-                            onclick="saveTask()">Salvar</button>
+                            >Salvar</button>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/script.js"></script>
