@@ -141,16 +141,16 @@ html {
   background-color: var(--primary-background);
 }
 
-/* .task-card .trash{
+.task-card .trash{
   position: relative;
   background-color:transparent;
   height: auto;
   padding: 0 10px 0 10px;
   margin: 4px;
   left: 78%;
-} */
+}
 
-/* .trash, */
+.trash,
 .trashAll img{
   width: 30px;
   height: 30px;

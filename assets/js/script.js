@@ -91,10 +91,11 @@ const saveTask = () => {
           <p class="title">${valueTask.value}</p>
           <p class="timeDay">${valueTime.value} - ${valueDay}</p>
           <p>${dayModal.value} de ${dayModalText.value}</p>
-  
+          
+         <button class="trash" onclick="removeTask(${i})"> <img src="./assets/img/trash.svg"></button> 
         </div> `
         )
-        /*  <button class="trash" onclick="removeTask(${i})"> <img src="./assets/img/trash.svg"></button> */
+        
 
         list.appendChild(li);
 
@@ -110,14 +111,14 @@ const saveTask = () => {
   }
 }
 
-/* const removeTask = (i) => {
+const removeTask = (i) => {
   var listSelect = document.getElementsByTagName("ul")[0]
   var item = listSelect.getElementsByTagName('li')
 
   list.removeChild(item[i])
 
   itemList.splice(i, 1)
-} */
+}
 
 // Removendo todas as task
 const removeTaskAll = () => {
